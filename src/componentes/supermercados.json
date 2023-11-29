@@ -1,0 +1,7 @@
+[
+    {"id": "1","ciudadValor":"encarnacion", "nombre" : "La Familia Centro", "valor": "la-familia-centro", "latitud": -27.3321237,"longitud": -55.9038376},
+    {"id": "2","ciudadValor":"encarnacion", "nombre" : "La Familia Express", "valor": "la-familia-express", "latitud": -27.3583917,"longitud": -55.8866093},
+    {"id": "3","ciudadValor":"encarnacion", "nombre" : "Super Seis", "valor": "super-seis", "latitud": -27.3404569,"longitud": -55.8619475},
+    {"id": "4","ciudadValor":"cambyreta", "nombre" : "El Canguro", "valor": "el-canguro", "latitud": -27.3424652,"longitud": -55.8491194},
+    {"id": "5","ciudadValor":"cambyreta", "nombre" : "Mia Minimarket", "valor": "mia-minimarket", "latitud": -27.3444271,"longitud": -55.9138947}
+]
