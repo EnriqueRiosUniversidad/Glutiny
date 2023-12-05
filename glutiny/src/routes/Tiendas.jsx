@@ -1,12 +1,12 @@
 import React from 'react';
 import Menu from '../components/Menu';
 import * as pictures from '../pictures/pictures';
-
+import CuerpoTiendas from '../components/CuerpoTiendas'
 
 const Tiendas = () => {
   return (
     <div>
-     
+   
       <div className="container-fluid">
         <div className="row bg-white">
           <div className="col-12 py-3">
@@ -55,13 +55,7 @@ const Tiendas = () => {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-12 mt-3">
-            <div className="scrollable-content">
-              {/* Aquí puedes agregar tus productos con scroll vertical */}
-            </div>
-          </div>
-        </div>
+        <CuerpoTiendas />
       </div>
 
       <Menu />
