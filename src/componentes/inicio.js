@@ -1,7 +1,7 @@
 import React from "react";
 import inicio from '../img/inicio.JPG';
 
-function FnInicio(){
+function Inicio(){
     return(
         <div>
         <img src={inicio}/>
@@ -9,4 +9,4 @@ function FnInicio(){
     );
 }
 
-export default FnInicio;
+export default Inicio;

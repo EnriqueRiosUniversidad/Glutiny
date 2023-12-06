@@ -4,7 +4,7 @@ import * as pictures from '../img/pictures';
 
 const Menu = () => {
   return (
-    <div>
+    <div style={menuContainer}>
       <nav style={navStyle}>
         <ul style={ulStyle}>
           <li style={liStyle}>
@@ -78,6 +78,12 @@ const Menu = () => {
 };
 
 // Estilos CSS
+const menuContainer = {
+  position: 'fixed',
+  bottom: 0,
+  width: '100%',
+};
+
 const navStyle = {
   backgroundColor: '#66bb6a',
   padding: '10px',

@@ -8,6 +8,8 @@ import Error from './routes/Error'
 import Home from './routes/Home'
 import Tiendas from './routes/Tiendas'
 import Mapa from './componentes/Mapa';
+import Inicio from './componentes/Inicio';
+
 const router = createBrowserRouter([
 
   {

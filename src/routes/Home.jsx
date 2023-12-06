@@ -2,27 +2,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from 'react';
 import Menu from '../componentes/Menu';
+import inicio from '../img/inicio.JPG';
 
 
 
 export default function Home() {
 
-      return (
-        <div className="text-center">
-          
-          <h1><b>HOME</b></h1>
-          <div>
-            <p>BIENVENIDO A UNA PAGINAD DE USUARIOS Y PRODUCTOS</p>
-            <p>Use el nabBar para navegar entre paginas.</p>
-            
-       
-          </div>
+  return (
+    <div className="text-center">
 
-
-          
-          <Menu />
-        </div>
-      );
+      <div>
+        <img src={inicio} />
+      </div>
+      <Menu />
+    </div>
+  );
 }
 
 
@@ -35,6 +29,6 @@ export default function Home() {
 
 
 
-   
+
 
 

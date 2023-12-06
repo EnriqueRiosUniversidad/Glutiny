@@ -8,6 +8,8 @@ import iconShadow from 'leaflet/dist/images/marker-icon.png'
 import ciudadesItapua from './ciudadesItapua.json'
 import restaurantes from './restaurantes.json'
 import supermercados from './supermercados.json'
+import Menu from './Menu';
+import logoLocalizacion from '../img/logo-localizacion.png';
 
 let iconUbicacion = new L.icon({
     iconUrl: icon,
@@ -63,6 +65,12 @@ const Mapa = () => {
 
     return (
         <div>
+            <div className='logo'>
+                <img src={logoLocalizacion}/>
+            </div>
+            <div className='contendor-buscador'>
+                hola
+            </div>
             <div className='contenedor-selectores'>
                 <select
                     value={ciudadSeleccionada}
@@ -115,6 +123,7 @@ const Mapa = () => {
                     )}
                 </MapContainer>
             </div>
+            <Menu/>
         </div>
     );
 }
