@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
-import FnInicio from './componentes/inicio';
-import Mapa from './componentes/Mapa';
+import Menu from "./componentes/Menu";
+
+
 
 function App() {
-  return ( 
-    <div>
-        <Mapa/>
+  return (
+    <div className="App">
+      <header className="App-header">
+      <Menu />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+       
+      </header>
     </div>
   );
 }

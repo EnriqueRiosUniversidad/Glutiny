@@ -1,4 +1,32 @@
 .mapa{
-    width: 300px;
+    width: auto;
     height: 300px;
+}
+
+select{
+    display: flex;
+    background-color: #aee69a67;
+    color: rgb(87, 86, 86);
+    border-radius: 2px;
+    border-color: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Valores de la sombra */
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.contenedor-selectores {
+    display: flex; /* Usa Flexbox para distribuir los elementos */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .contenedor-selectores select {
+    flex: 1; /* Distribuye el espacio de manera igual entre los selectores */
+    margin-right: 10px; /* Espacio entre los selectores (puedes ajustarlo) */
+  }
+
+.contenedor-mapa{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
