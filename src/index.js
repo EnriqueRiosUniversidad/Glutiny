@@ -8,7 +8,7 @@ import Error from './routes/Error'
 import Home from './routes/Home'
 import Tiendas from './routes/Tiendas'
 import Mapa from './componentes/Mapa';
-import Inicio from './componentes/Inicio';
+import Restaurante from './componentes/Restaurante';
 
 const router = createBrowserRouter([
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/Restaurantes', 
-    element: <h1>Restaurantes</h1>,
+    element: <Restaurante/>,
     errorElement: <Error />,
   },
   {

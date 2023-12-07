@@ -8,3 +8,7 @@ export { default as maps } from './maps.png';
 export { default as super6 } from './super6.png';
 
 export { default as logo } from './logo.png';
+
+
+//restaurante
+export { default as logoRestaurante } from './logoRestaurante.png';
