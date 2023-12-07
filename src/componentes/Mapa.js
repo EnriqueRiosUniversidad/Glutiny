@@ -10,6 +10,9 @@ import restaurantes from './restaurantes.json'
 import supermercados from './supermercados.json'
 import Menu from './Menu';
 import logoLocalizacion from '../img/logo-localizacion.png';
+import iconBuscar from '../img/search.svg'
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
+
 
 let iconUbicacion = new L.icon({
     iconUrl: icon,
@@ -61,15 +64,58 @@ const Mapa = () => {
         console.log('Longitud actualizada:', longitud);
     }, [latitud, longitud]);
 
-    // ... Código de renderizado de opciones de selección
+    const [ciudadesFiltradas, setCiudadesFiltradas] = useState([]);
+
+    const handleCiudadChange = (e) => {
+        const ciudadIngresada = e.target.value;
+        setCiudadSeleccionada(ciudadIngresada);
+
+        const ciudadEncontrada = ciudadesItapua.find(ciudad =>
+            ciudad.nombre.toLowerCase().includes(ciudadIngresada.toLowerCase())
+        );
+
+        if (ciudadEncontrada) {
+            setLatitud(ciudadEncontrada.latitud);
+            setLongitud(ciudadEncontrada.longitud);
+        }
+    };
+
+    useEffect(() => {
+        if (ciudadSeleccionada) {
+            const ciudadesFiltradasPorNombre = ciudadesItapua.filter(ciudad =>
+                ciudad.nombre.toLowerCase().includes(ciudadSeleccionada.toLowerCase())
+            );
+            setCiudadesFiltradas(ciudadesFiltradasPorNombre);
+        } else {
+            setCiudadesFiltradas([]);
+        }
+    }, [ciudadSeleccionada]);
+
 
     return (
         <div>
             <div className='logo'>
-                <img src={logoLocalizacion}/>
+                <img src={logoLocalizacion} />
             </div>
-            <div className='contendor-buscador'>
-                hola
+            <div className='contenedor-buscador'>
+                <div className="input-group mb-3 buscador">
+                    <span class="input-group-text" id="basic-addon1"><img src={iconBuscar} /></span>
+
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Buscar ciudad..."
+                        value={ciudadSeleccionada}
+                        onChange={handleCiudadChange}
+                    />
+                </div>
+            </div>
+            <div>
+                {ciudadesFiltradas.map((ciudad) => (
+                    <div key={ciudad.valor} onClick={() => setCiudadSeleccionada(ciudad.nombre)}>
+                        {ciudad.nombre}
+                    </div>
+                ))}
             </div>
             <div className='contenedor-selectores'>
                 <select
@@ -123,7 +169,7 @@ const Mapa = () => {
                     )}
                 </MapContainer>
             </div>
-            <Menu/>
+            <Menu />
         </div>
     );
 }

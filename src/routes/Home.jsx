@@ -12,16 +12,12 @@ export default function Home() {
     <div className="text-center">
 
       <div>
-        <img src={inicio} />
+        <img src={inicio} style={{backgroundSize:'cover'}}/>
       </div>
       <Menu />
     </div>
   );
 }
-
-
-
-
 
 
 
