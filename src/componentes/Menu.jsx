@@ -85,7 +85,7 @@ const menuContainer = {
 };
 
 const navStyle = {
-  backgroundColor: '#66bb6a',
+  backgroundColor: '#D9F6CB',  // Cambia el color de fondo aquí
   padding: '10px',
 };
 
