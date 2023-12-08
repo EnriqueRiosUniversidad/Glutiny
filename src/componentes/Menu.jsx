@@ -15,7 +15,7 @@ const Menu = () => {
                   alt=""
                   style={{ width: '50px', height: '50px' }}
                 />
-                <p>Home</p>
+                
               </div>
             </Link>
           </li>
@@ -28,7 +28,7 @@ const Menu = () => {
                   alt=""
                   style={{ width: '50px', height: '50px' }}
                 />
-                <p>Tiendas</p>
+                
               </div>
             </Link>
           </li>
@@ -41,7 +41,7 @@ const Menu = () => {
                   alt=""
                   style={{ width: '50px', height: '50px' }}
                 />
-                <p>Restaurantes</p>
+                
               </div>
             </Link>
           </li>
@@ -54,7 +54,7 @@ const Menu = () => {
                   alt=""
                   style={{ width: '50px', height: '50px' }}
                 />
-                <p>Recetas</p>
+                
               </div>
             </Link>
           </li>
@@ -67,7 +67,6 @@ const Menu = () => {
                   alt=""
                   style={{ width: '50px', height: '50px' }}
                 />
-                 <p>Maps</p>
               </div>
             </Link>
           </li>
@@ -85,7 +84,7 @@ const menuContainer = {
 };
 
 const navStyle = {
-  backgroundColor: '#66bb6a',
+  backgroundColor: '#D9F6CB',  
   padding: '10px',
 };
 

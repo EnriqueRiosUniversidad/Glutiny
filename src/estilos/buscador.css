@@ -1,0 +1,15 @@
+.contenedor-buscador{
+    background-color: #aee69a62;
+
+}
+
+.contenedor-buscador .row{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.img-icon{
+    height: 24px;
+}
+

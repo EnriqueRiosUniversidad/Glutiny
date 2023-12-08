@@ -1,5 +1,5 @@
 .contenedor-mapa {
-  height: 300px;
+  height: 250px;
   /* Esto establece la altura del contenedor del mapa al 70% del alto de la ventana */
 }
 
@@ -52,27 +52,14 @@ select {
   width: 50%;
 }
 
-.contenedor-buscador {
-  background-color: #aee69a62;
-  padding: 3px;
-  text-align: center;
-  /* Alineación de texto para centrar */
-
-}
-
-.buscador {
-  width: 50%;
-}
-
-.btn-buscar {
-
-  height: 40px;
-}
-
 /* Media query para hacerlos responsive */
 @media (max-width: 768px) {
   .contenedor-selectores select {
     font-size: 4vw;
     /* Reducir el tamaño de la fuente para pantallas más pequeñas */
+  }
+
+  .contenedor-mapa {
+    height: 400px;
   }
 }

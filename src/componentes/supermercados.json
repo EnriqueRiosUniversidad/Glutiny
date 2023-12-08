@@ -1,7 +1,7 @@
 [
-    {"id": "1","ciudadValor":"encarnacion", "nombre" : "La Familia Centro", "valor": "La Familia Centro", "latitud": -27.3321237,"longitud": -55.9038376},
-    {"id": "2","ciudadValor":"encarnacion", "nombre" : "La Familia Express", "valor": "La Familia Centro", "latitud": -27.3583917,"longitud": -55.8866093},
-    {"id": "3","ciudadValor":"encarnacion", "nombre" : "Super Seis", "valor": "Super Seis", "latitud": -27.3404569,"longitud": -55.8619475},
-    {"id": "4","ciudadValor":"cambyreta", "nombre" : "El Canguro", "valor": "El Canguro", "latitud": -27.3424652,"longitud": -55.8491194},
-    {"id": "5","ciudadValor":"cambyreta", "nombre" : "Mia Minimarket", "valor": "Mia Minimarket", "latitud": -27.3444271,"longitud": -55.9138947}
+    {"id": "1","ciudadValor":"encarnacion", "nombre" : "La Familia Centro", "valor": "La Familia Centro", "latitud": -27.3321237,"longitud": -55.9038376, "link":"/Tiendas"},
+    {"id": "2","ciudadValor":"encarnacion", "nombre" : "La Familia Express", "valor": "La Familia Centro", "latitud": -27.3583917,"longitud": -55.8866093, "link":"/Tiendas"},
+    {"id": "3","ciudadValor":"encarnacion", "nombre" : "Super Seis", "valor": "Super Seis", "latitud": -27.3404569,"longitud": -55.8619475, "link":"/Tiendas"},
+    {"id": "4","ciudadValor":"cambyreta", "nombre" : "El Canguro", "valor": "El Canguro", "latitud": -27.3424652,"longitud": -55.8491194, "link":"/Tiendas"},
+    {"id": "5","ciudadValor":"cambyreta", "nombre" : "Mia Minimarket", "valor": "Mia Minimarket", "latitud": -27.3444271,"longitud": -55.9138947, "link":"/Tiendas"}
 ]
