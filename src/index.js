@@ -9,6 +9,7 @@ import Home from './routes/Home'
 import Tiendas from './routes/Tiendas'
 import Mapa from './componentes/Mapa';
 import Restaurante from './componentes/Restaurante';
+import Recetas from './componentes/Recetas';
 
 const router = createBrowserRouter([
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/Recetas', 
-    element: <h1>Recetas</h1>,
+    element: <Recetas/>,
     errorElement: <Error />,
   },
 
