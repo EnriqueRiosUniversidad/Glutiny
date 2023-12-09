@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RecuadroContenido from './RecuadroContenido';
+import RecuadroContenido from './RecuadroContenidoRestaurantes';
 import { restaurantes } from './datosRestaurante';
 
 const CuerpoRestaurantes = ({ filtroTipo }) => {

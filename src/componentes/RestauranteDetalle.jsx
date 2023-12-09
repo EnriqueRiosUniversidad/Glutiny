@@ -1,6 +1,6 @@
 // RestauranteDetalle.jsx
 import React from 'react';
-import RecuadroContenido from './RecuadroContenido';
+import RecuadroContenido from './RecuadroContenidoRestaurantes';
 import { useParams } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,8 +9,9 @@ import CuerpoRestaurantes from './CuerpoRestaurantes';
 import Buscador from './Buscador';
 import * as pictures from '../img/pictures';
 // Asegúrate de importar o definir 'restaurantes' aquí
-import { restaurantes } from './datosRestaurante'; // Ajusta la ruta según la ubicación real de tus datos
+import { restaurantes, productos } from './datosRestaurante'; // Ajusta la ruta según la ubicación real de tus datos
 
+import ProductosRestaurante from './ProductosRestaurante';
 function RestauranteDetalle() {
   const { id } = useParams();
   const restaurante = restaurantes.find((r) => r.id === parseInt(id));
@@ -18,6 +19,9 @@ function RestauranteDetalle() {
   if (!restaurante) {
     return <p>Restaurante no encontrado</p>;
   }
+
+  const productosRestaurante = productos.filter((p) => p.restauranteId === restaurante.id);
+
 
   return (
     <div>
@@ -38,7 +42,7 @@ function RestauranteDetalle() {
         
         
       </div>
-
+      <ProductosRestaurante productos={productosRestaurante} />
       <Menu />
     
     </div>
