@@ -1,16 +1,21 @@
+// Restaurante.jsx
+// Restaurante.jsx
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './Menu';
-import * as pictures from '../img/pictures';
 import CuerpoRestaurantes from './CuerpoRestaurantes';
+import RestauranteDetalle from './RestauranteDetalle';
 import Buscador from './Buscador';
+import * as pictures from '../img/pictures';
 
 const Restaurante = () => {
   const [filtroTipo, setFiltroTipo] = useState(null);
-
+ 
   const handleFiltroClick = (tipo) => {
     setFiltroTipo(tipo);
   };
+
+
 
   return (
     <div>
@@ -21,11 +26,11 @@ const Restaurante = () => {
               src={pictures.logoRestaurante}
               alt="Logo de tu empresa"
               className="logo"
-              style={{ width: '170px', height: '50px' }}
+              style={{ width: '190px', height: '50px' }}
             />
           </div>
         </div>
-<Buscador />
+        <Buscador/>
         {/* Botones de filtro */}
         <div className="row" style={contenedorBotones}>
           <div className="col-12 mt-3 mb-2" style={contenedorSelectores}>
@@ -55,16 +60,14 @@ const Restaurante = () => {
             </button>
           </div>
         </div>
-
-        {/* Componente CuerpoRestaurantes con el filtro */}
-        <CuerpoRestaurantes filtroTipo={filtroTipo} />
+        
+        <CuerpoRestaurantes filtroTipo={filtroTipo}  />
       </div>
 
       <Menu />
     </div>
   );
 };
-
 // Estilos CSS
 const contenedorSelectores = {
   display: 'flex',
