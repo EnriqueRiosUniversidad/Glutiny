@@ -1,30 +1,28 @@
+// index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 //rutas
-import Error from './routes/Error'
-import Home from './routes/Home'
-import Tiendas from './routes/Tiendas'
+import Error from './routes/Error';
+import Home from './routes/Home';
+import Tiendas from './routes/Tiendas';
 import Mapa from './componentes/Mapa';
 import Restaurante from './componentes/Restaurante';
-import Recetas from './componentes/Recetas';
+import RestauranteDetalle from './componentes/RestauranteDetalle'; // Agrega esta importación
 
 const router = createBrowserRouter([
-
   {
     path: '/',
     element: <Home />,
     errorElement: <Error />,
-    
   },
   {
     path: '/Maps',
     element: <h1><Mapa/></h1>,
     errorElement: <Error />,
   },
-
   {
     path: '/Tiendas',
     element: <Tiendas />,
@@ -37,12 +35,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/Recetas', 
-    element: <Recetas/>,
+    element: <h1>Recetas</h1>,
     errorElement: <Error />,
   },
-
-  ]
-)
+  {
+    path: '/restaurante-detalle/:id', // Ruta con parámetro dinámico
+    element: <RestauranteDetalle />,
+    errorElement: <Error />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -50,4 +51,3 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
