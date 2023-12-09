@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, useMap, Popup, Marker } from 'react-leaflet'
+import { Link } from 'react-router-dom';
 import '../estilos/mapa.css'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
@@ -10,6 +11,8 @@ import restaurantes from './restaurantes.json'
 import supermercados from './supermercados.json'
 import Menu from './Menu';
 import logoLocalizacion from '../img/logo-localizacion.png';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
+
 import Buscador from './Buscador';
 
 let iconUbicacion = new L.icon({
@@ -32,26 +35,35 @@ const Mapa = () => {
     const filtroSupermercados = supermercados.filter((supermercado) => supermercado.ciudadValor === ciudadSeleccionada);
     const [tipoSeleccionado, setTipoSeleccionado] = useState(''); // Tipo seleccionado: restaurante o supermercado
 
-
     const handleRestauranteChange = (e) => {
-        setRestauranteSeleccionado(e.target.value);
-        setSuperSeleccionado(''); // Reiniciar la selección del supermercado
-        setTipoSeleccionado('restaurante');
-        // Lógica para obtener las coordenadas del restaurante seleccionado y establecer latitud y longitud
-        const restauranteEncontrado = restaurantes.find(restaurante => restaurante.valor === e.target.value);
+        const valorSeleccionado = e.target.value;
+
+        // Encuentra el restaurante seleccionado
+        const restauranteEncontrado = restaurantes.find(restaurante => restaurante.valor === valorSeleccionado);
+
         if (restauranteEncontrado) {
+            setRestauranteSeleccionado({ valor: restauranteEncontrado.valor, link: restauranteEncontrado.link });
+            setSuperSeleccionado(''); // Reiniciar la selección del supermercado
+            setTipoSeleccionado('restaurante');
+
+            // Lógica para obtener las coordenadas del restaurante seleccionado y establecer latitud y longitud
             setLatitud(restauranteEncontrado.latitud);
             setLongitud(restauranteEncontrado.longitud);
         }
     };
 
     const handleSupermercadoChange = (e) => {
-        setSuperSeleccionado(e.target.value);
-        setRestauranteSeleccionado(''); // Reiniciar la selección del restaurante
-        setTipoSeleccionado('supermercado');
-        // Lógica para obtener las coordenadas del supermercado seleccionado y establecer latitud y longitud
-        const supermercadoEncontrado = supermercados.find(supermercado => supermercado.valor === e.target.value);
+        const valorSeleccionado = e.target.value;
+
+        // Encuentra el supermercado seleccionado
+        const supermercadoEncontrado = supermercados.find(supermercado => supermercado.valor === valorSeleccionado);
+
         if (supermercadoEncontrado) {
+            setSuperSeleccionado({ valor: supermercadoEncontrado.valor, link: supermercadoEncontrado.link });
+            setRestauranteSeleccionado(''); // Reiniciar la selección del restaurante
+            setTipoSeleccionado('supermercado');
+
+            // Lógica para obtener las coordenadas del supermercado seleccionado y establecer latitud y longitud
             setLatitud(supermercadoEncontrado.latitud);
             setLongitud(supermercadoEncontrado.longitud);
         }
@@ -62,15 +74,25 @@ const Mapa = () => {
         console.log('Longitud actualizada:', longitud);
     }, [latitud, longitud]);
 
-    // ... Código de renderizado de opciones de selección
+    const [ciudadesFiltradas, setCiudadesFiltradas] = useState([]);
 
+
+    useEffect(() => {
+        if (ciudadSeleccionada) {
+            const ciudadesFiltradasPorNombre = ciudadesItapua.filter(ciudad =>
+                ciudad.nombre.toLowerCase().includes(ciudadSeleccionada.toLowerCase())
+            );
+            setCiudadesFiltradas(ciudadesFiltradasPorNombre);
+        } else {
+            setCiudadesFiltradas([]);
+        }
+    }, [ciudadSeleccionada]);
+
+  
     return (
         <div>
             <div className='logo'>
-                <img src={logoLocalizacion}/>
-            </div>
-            <div className='contendor-buscador'>
-                hola
+                <img src={logoLocalizacion} />
             </div>
             <Buscador />
             <div className='contenedor-selectores'>
@@ -117,15 +139,28 @@ const Mapa = () => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     {latitud && longitud && (
-                        <Marker position={[latitud, longitud]} icon={iconUbicacion}>
+                        <Marker
+                            position={[latitud, longitud]}
+                            icon={iconUbicacion}
+                            eventHandlers={{
+                                click: () => {
+                                    if (tipoSeleccionado === 'restaurante' && restauranteSeleccionado) {
+                                        window.open(restauranteSeleccionado.link, '_blank');
+                                    } else if (tipoSeleccionado === 'supermercado' && superSeleccionado) {
+                                        window.open(superSeleccionado.link, '_blank');
+                                    }
+                                }
+                            }}
+                        >
                             <Popup>
-                                {superSeleccionado}
+                                {/* Contenido del Popup */}
                             </Popup>
                         </Marker>
+
                     )}
                 </MapContainer>
             </div>
-            <Menu/>
+            <Menu />
         </div>
     );
 }
