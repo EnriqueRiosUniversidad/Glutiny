@@ -1,7 +1,7 @@
 [
-    {"id": "1","ciudadValor":"encarnacion", "nombre" : "Curcuma", "valor": "curcuma", "latitud": -27.3272922,"longitud": -55.8720088},
-    {"id": "2","ciudadValor":"encarnacion", "nombre" : "La Mafia", "valor": "la-mafia", "latitud": -27.3562782,"longitud": -55.8564667},
-    {"id": "3","ciudadValor":"encarnacion", "nombre" : "Pizza Hut", "valor": "pizza-hut", "latitud": -27.3358123,"longitud": -55.8760334},
-    {"id": "4","ciudadValor":"cambyreta", "nombre" : "El Rincón Artesanal", "valor": "rincon-artesanal", "latitud": -27.3356863,"longitud": -55.9146584},
-    {"id": "5","ciudadValor":"cambyreta", "nombre" : "Pastas Alfonso", "valor": "pasta-alfonso", "latitud": -27.3356863,"longitud": -55.9146584}
+    {"id": "1","ciudadValor":"encarnacion", "nombre" : "Curcuma", "valor": "curcuma", "latitud": -27.3272922,"longitud": -55.8720088, "link":"/Restaurantes"},
+    {"id": "2","ciudadValor":"encarnacion", "nombre" : "La Mafia", "valor": "la-mafia", "latitud": -27.3562782,"longitud": -55.8564667, "link":"/Restaurantes"},
+    {"id": "3","ciudadValor":"encarnacion", "nombre" : "Pizza Hut", "valor": "pizza-hut", "latitud": -27.3358123,"longitud": -55.8760334, "link":"/Restaurantes"},
+    {"id": "4","ciudadValor":"cambyreta", "nombre" : "El Rincón Artesanal", "valor": "rincon-artesanal", "latitud": -27.3356863,"longitud": -55.9146584, "link":"/Restaurantes"},
+    {"id": "5","ciudadValor":"cambyreta", "nombre" : "Pastas Alfonso", "valor": "pasta-alfonso", "latitud": -27.3356863,"longitud": -55.9146584, "link":"/Restaurantes"}
 ]
