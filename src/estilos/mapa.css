@@ -1,65 +1,47 @@
 .contenedor-mapa {
-  height: 250px;
-  /* Esto establece la altura del contenedor del mapa al 70% del alto de la ventana */
+  height: 70vh; /* Esto establece la altura del contenedor del mapa al 70% del alto de la ventana */
 }
 
-.mapa {
-  width: 100%;
-  height: 100%;
+.mapa{
+    width: auto;
+    height: 100%;
 }
 
-select {
-  display: flex;
-  background-color: #aee69a67;
-  color: rgb(87, 86, 86);
-  border-radius: 2px;
-  border-color: transparent;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  /* Valores de la sombra */
-  margin-right: 10px;
-  padding: 5px;
+select{
+    display: flex;
+    background-color: #aee69a67;
+    color: rgb(87, 86, 86);
+    border-radius: 2px;
+    border-color: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Valores de la sombra */
+    margin-right: 10px;
+    padding: 5px;
 }
 
 .contenedor-selectores {
-  text-align: center;
-  /* Alineación para centrar los elementos (opcional) */
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-
-}
-
-.contenedor-selectores select {
-  display: inline-block;
-  /* Mostrar los selects en línea */
-  width: calc(33% - 10px);
-  /* Espacio entre los selects */
-  margin-bottom: 15px;
-  /* Espacio inferior para separación */
-  margin-right: 10px;
-  /* Espacio entre los selectores (puedes ajustarlo) */
-
-}
-
-.contenedor-mapa {
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
-.logo img {
-  height: 15%;
-  width: 50%;
-}
-
-/* Media query para hacerlos responsive */
-@media (max-width: 768px) {
+    display: flex; /* Usa Flexbox para distribuir los elementos */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
   .contenedor-selectores select {
-    font-size: 4vw;
-    /* Reducir el tamaño de la fuente para pantallas más pequeñas */
+    flex: 1; /* Distribuye el espacio de manera igual entre los selectores */
+    margin-right: 10px; /* Espacio entre los selectores (puedes ajustarlo) */
   }
 
-  .contenedor-mapa {
-    height: 400px;
-  }
+.contenedor-mapa{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.logo img{
+  height: 100px;
+  width: 350px;
+}
+
+.contendor-buscardor{
+  background-color: #aee69a62;
+  padding: 20px;
+  text-align: center;
 }

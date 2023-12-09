@@ -1,17 +1,19 @@
-import Menu from "./componentes/Menu";
-
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Menu from './componentes/Menu';
+import Restaurante from './componentes/Restaurante';
+import RestauranteDetalle from './componentes/RestauranteDetalle';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Router>
+      <Routes>
+        <Route path="/restaurantes" element={<Restaurante />} />
+        <Route path="/restaurantes/:id" element={<RestauranteDetalle />} />
+        {/* Otras rutas si las tienes */}
+      </Routes>
       <Menu />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    </Router>
   );
 }
 

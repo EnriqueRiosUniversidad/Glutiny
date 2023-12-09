@@ -12,3 +12,11 @@ export { default as logo } from './logo.png';
 
 //restaurante
 export { default as logoRestaurante } from './logoRestaurante.png';
+export { default as ajisai } from './ajisai.jpg';
+export { default as curcuma } from './curcuma.jpg';
+export { default as lamafia } from './lamafia.png';
+export { default as ogaucho } from './ogaucho.jpg';
+export { default as pizzahub } from './pizzahub.jpg';
+export { default as rolandi } from './rolandi.jpg';
+export { default as vegie } from './vegie.jpeg';
+

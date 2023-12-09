@@ -13,6 +13,7 @@ export default function CuerpoTiendas() {
                         titulo="Super 6"
                         direccion="6098 Jose Antonio y, Maria roqu"
                         horas="07:00- 20:30"
+                        tipo="Celiaco | Vegano "
                         telefono="0983 994 674"
                     />
 
@@ -21,6 +22,7 @@ export default function CuerpoTiendas() {
                         titulo="Super 6"
                         direccion="6098 Jose Antonio y, Maria roqu"
                         horas="07:00- 20:30"
+                        tipo="Celiaco | Vegano "
                         telefono="0983 994 674"
                     />
 
@@ -29,6 +31,7 @@ export default function CuerpoTiendas() {
                         titulo="Super 6"
                         direccion="6098 Jose Antonio y, Maria roqu"
                         horas="07:00- 20:30"
+                        tipo="Sin Lactosa "
                         telefono="0983 994 674"
                     />
 
