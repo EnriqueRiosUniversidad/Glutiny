@@ -20,3 +20,12 @@ export { default as pizzahub } from './pizzahub.jpg';
 export { default as rolandi } from './rolandi.jpg';
 export { default as vegie } from './vegie.jpeg';
 
+//restaurante productos 
+export { default as helado } from './helado.png';
+export { default as tortita } from './tortita.png';
+export { default as pizza } from './pizza.png';
+export { default as budin } from './budin.png';
+
+
+
+
