@@ -1,0 +1,5 @@
+[
+    {"id": "1","ciudadValor":"encarnacion", "nombre" : "Super6", "valor": "Super6", "latitud": -27.3272922,"longitud": -55.8720088, "link":"/Tiendas"},
+    {"id": "2","ciudadValor":"encarnacion", "nombre" : "La Familia", "valor": "la-familia", "latitud": -27.3562782,"longitud": -55.8564667, "link":"/Tiendas"},
+    {"id": "3","ciudadValor":"encarnacion", "nombre" : "Super San Martin", "valor": "super-san-martin", "latitud": -27.3358123,"longitud": -55.8760334, "link":"/Tiendas"}
+]
