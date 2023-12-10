@@ -7,10 +7,14 @@ import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 //rutas
 import Error from './routes/Error';
 import Home from './routes/Home';
-import Tiendas from './routes/Tiendas';
+import Tiendas from './componentes/stores/Tienda';
+import TiendaDetalle from './componentes/stores/TiendaDetalle'; // Agrega esta importación
+
 import Mapa from './componentes/Mapa';
 import Restaurante from './componentes/Restaurante';
 import RestauranteDetalle from './componentes/RestauranteDetalle'; // Agrega esta importación
+
+
 
 const router = createBrowserRouter([
   {
@@ -26,6 +30,11 @@ const router = createBrowserRouter([
   {
     path: '/Tiendas',
     element: <Tiendas />,
+    errorElement: <Error />,
+  },
+  {
+    path: '/tienda-detalle/:id', // Ruta con parámetro dinámico
+    element: <TiendaDetalle />,
     errorElement: <Error />,
   },
   {
