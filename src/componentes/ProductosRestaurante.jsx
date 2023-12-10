@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import Producto from './Producto';
-import { productos } from './datosRestaurante';
 
 const ProductosRestaurante = ({ productos }) => {
   const [filtroTipo, setFiltroTipo] = useState(null);
 
   // Filtrar productos según los filtros seleccionados
   const productosFiltrados = productos
-    ? productos.filter((producto) => producto.tipo.includes(filtroTipo))
+    ? productos.filter((producto) =>
+        !filtroTipo || (producto.tipo && producto.tipo.toLowerCase().includes(filtroTipo))
+      )
     : productos;
 
   // Función para manejar cambios en los filtros
   const handleFiltroClick = (tipo) => {
-    setFiltroTipo(tipo);
+    setFiltroTipo(tipo && tipo.toLowerCase());
   };
 
   return (
@@ -22,25 +23,33 @@ const ProductosRestaurante = ({ productos }) => {
         <div className="col-12 mt-3 mb-2" style={contenedorSelectores}>
           <button
             type="button"
-            className="btn btn-success"
+            className={`btn btn-success ${!filtroTipo ? 'active' : ''}`}
             style={selectorStyle}
-            onClick={() => handleFiltroClick('Vegano')}
+            onClick={() => handleFiltroClick(null)}
+          >
+            Todos
+          </button>
+          <button
+            type="button"
+            className={`btn btn-success ${filtroTipo === 'vegano' ? 'active' : ''}`}
+            style={selectorStyle}
+            onClick={() => handleFiltroClick('vegano')}
           >
             Veganos
           </button>
           <button
             type="button"
-            className="btn btn-success"
+            className={`btn btn-success ${filtroTipo === 'celiaco' ? 'active' : ''}`}
             style={selectorStyle}
-            onClick={() => handleFiltroClick('Celiaco')}
+            onClick={() => handleFiltroClick('celiaco')}
           >
             Celiacos
           </button>
           <button
             type="button"
-            className="btn btn-success"
+            className={`btn btn-success ${filtroTipo === 'sin lactosa' ? 'active' : ''}`}
             style={selectorStyle}
-            onClick={() => handleFiltroClick('Sin Lactosa')}
+            onClick={() => handleFiltroClick('sin lactosa')}
           >
             Sin Lactosa
           </button>
@@ -53,6 +62,7 @@ const ProductosRestaurante = ({ productos }) => {
     </div>
   );
 };
+
 
 // Estilos CSS (Asumiendo que estos estilos están definidos en tu componente)
 const contenedorSelectores = {

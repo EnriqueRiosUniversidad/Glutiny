@@ -11,6 +11,7 @@ const RecuadroContenido = ({ restaurante, detalleStyle = false, showFullContent 
     width: '100%',
     display: 'flex',
     alignItems: 'center',
+    fontSize: '0.9em',
   };
 
   const fotoStyle = {

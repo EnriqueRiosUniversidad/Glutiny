@@ -15,9 +15,9 @@ const Modal = ({ isOpen, closeModal, producto }) => {
               &times;
             </button>
           </div>
-          <h2>{nombre}</h2>
+          <h2 style={tituloStyle}>{nombre}</h2>
           <p>
-            <strong>Descripción:</strong> {descripcion} <br />
+            <strong></strong> {descripcion} <br />
             <strong>Tipo:</strong> {tipo} <br />
             <strong>Costo:</strong> {costo}
           </p>
@@ -71,6 +71,12 @@ const botonStyle = {
   fontSize: '24px',
   background: '#fff',
   border: 'none',
+};
+
+const tituloStyle = {
+  fontSize:   '2em', // Ajusta el tamaño del título según la condición
+  color:'#6A8F00',  // Cambia el color del título según la condición
+  fontFamily: 'Crimson Text, serif', 
 };
 
 export default Modal;

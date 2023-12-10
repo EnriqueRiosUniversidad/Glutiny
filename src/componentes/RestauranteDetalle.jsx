@@ -22,29 +22,25 @@ function RestauranteDetalle() {
 
   const productosRestaurante = productos.filter((p) => p.restauranteId === restaurante.id);
 
-
   return (
     <div>
       <div className="col-12 py-3">
-            <img
-              src={pictures.logoRestaurante}
-              alt="Logo de tu empresa"
-              className="logo"
-              style={{ width: '190px', height: '50px' }}
-            />
-          </div>
-      {/* Mostrar toda la información del restaurante en el contexto de detalle */}
-      <RecuadroContenido restaurante={restaurante} detalleStyle={true} showFullContent={true} />
-      
-      <div className="container-fluid">
-        <Buscador/>
-        {/* Botones de filtro */}
-        
-        
+        <img
+          src={pictures.logoRestaurante}
+          alt="Logo de tu empresa"
+          className="logo"
+          style={{ width: '190px', height: '50px' }}
+        />
       </div>
+      {/* Mostrar toda la información del restaurante en el contexto de detalle */}
+      <RecuadroContenido restaurante={restaurante} detalleStyle={true} showFullContent={true} style={{ marginBottom: '0px' ,padding:'0px'}} />
+
+      
+        <Buscador style={{ marginBottom: '0' ,padding:'0px'}} />
+        {/* Botones de filtro */}
+      
       <ProductosRestaurante productos={productosRestaurante} />
       <Menu />
-    
     </div>
   );
 }
