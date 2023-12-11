@@ -12,8 +12,9 @@ import TiendaDetalle from './componentes/stores/TiendaDetalle'; // Agrega esta i
 
 import Mapa from './componentes/Mapa';
 import Restaurante from './componentes/Restaurante';
+import Recetas from './componentes/Recetas';
 import RestauranteDetalle from './componentes/RestauranteDetalle'; // Agrega esta importación
-
+import RecetaDetalle from './componentes/RecetaDetalle';
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
   {
     path: '/restaurante-detalle/:id', // Ruta con parámetro dinámico
     element: <RestauranteDetalle />,
+    errorElement: <Error />,
+  },
+    {
+    path: '/receta-detalle/:id', // Ruta con parámetro dinámico
+    element: <RecetaDetalle />,
     errorElement: <Error />,
   },
 ]);
