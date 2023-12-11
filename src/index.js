@@ -43,9 +43,9 @@ const router = createBrowserRouter([
     element: <Restaurante/>,
     errorElement: <Error />,
   },
-  {
+   {
     path: '/Recetas', 
-    element: <h1>Recetas</h1>,
+    element: <Recetas/>,
     errorElement: <Error />,
   },
   {
