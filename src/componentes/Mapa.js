@@ -11,7 +11,7 @@ import restaurantes from './restaurantes.json'
 import supermercados from './supermercados.json'
 import Menu from './Menu';
 import logoLocalizacion from '../img/logo-localizacion.png';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 import Buscador from './Buscador';
 
@@ -33,20 +33,17 @@ const Mapa = () => {
     const [longitud, setLongitud] = useState(-58.443832);
     const filtroRestaurantes = restaurantes.filter((restaurante) => restaurante.ciudadValor === ciudadSeleccionada);
     const filtroSupermercados = supermercados.filter((supermercado) => supermercado.ciudadValor === ciudadSeleccionada);
-    const [tipoSeleccionado, setTipoSeleccionado] = useState(''); // Tipo seleccionado: restaurante o supermercado
+    const [tipoSeleccionado, setTipoSeleccionado] = useState(''); 
 
     const handleRestauranteChange = (e) => {
         const valorSeleccionado = e.target.value;
 
-        // Encuentra el restaurante seleccionado
         const restauranteEncontrado = restaurantes.find(restaurante => restaurante.valor === valorSeleccionado);
 
         if (restauranteEncontrado) {
             setRestauranteSeleccionado({ valor: restauranteEncontrado.valor, link: restauranteEncontrado.link });
-            setSuperSeleccionado(''); // Reiniciar la selección del supermercado
+            setSuperSeleccionado('');
             setTipoSeleccionado('restaurante');
-
-            // Lógica para obtener las coordenadas del restaurante seleccionado y establecer latitud y longitud
             setLatitud(restauranteEncontrado.latitud);
             setLongitud(restauranteEncontrado.longitud);
         }
@@ -54,16 +51,12 @@ const Mapa = () => {
 
     const handleSupermercadoChange = (e) => {
         const valorSeleccionado = e.target.value;
-
-        // Encuentra el supermercado seleccionado
         const supermercadoEncontrado = supermercados.find(supermercado => supermercado.valor === valorSeleccionado);
 
         if (supermercadoEncontrado) {
             setSuperSeleccionado({ valor: supermercadoEncontrado.valor, link: supermercadoEncontrado.link });
-            setRestauranteSeleccionado(''); // Reiniciar la selección del restaurante
+            setRestauranteSeleccionado(''); 
             setTipoSeleccionado('supermercado');
-
-            // Lógica para obtener las coordenadas del supermercado seleccionado y establecer latitud y longitud
             setLatitud(supermercadoEncontrado.latitud);
             setLongitud(supermercadoEncontrado.longitud);
         }
@@ -153,7 +146,6 @@ const Mapa = () => {
                             }}
                         >
                             <Popup>
-                                {/* Contenido del Popup */}
                             </Popup>
                         </Marker>
 
