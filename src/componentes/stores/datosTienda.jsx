@@ -1,5 +1,5 @@
 
-import * as pictures from '//..//img//pictures';
+import * as pictures from '../../img/pictures';
 
 export const tiendas = [
   {
