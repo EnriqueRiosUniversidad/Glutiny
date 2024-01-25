@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RecuadroContenido from './RecuadroContenido';
+import RecuadroContenido from './RecuadroContenidoRestaurantes';
 import * as pictures from '../img/pictures';
 export default function CuerpoTiendas() {
     return (
