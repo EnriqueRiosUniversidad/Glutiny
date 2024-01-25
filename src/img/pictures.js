@@ -12,7 +12,7 @@ export { default as cityMarket } from './cityMarket.png';
 
 
 export { default as logo } from './logo.png';
-
+export { default as logoTienda } from './logoTienda.png';
 
 //Tiendas Productos
 export { default as harina_de_arroz_primicia } from './harina_de_arroz_primicia.png'; 
