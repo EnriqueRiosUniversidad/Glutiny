@@ -1,0 +1,10 @@
+.contenedor-imagen{
+    background: url('../img/inicio.JPG');
+    background-size: cover;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

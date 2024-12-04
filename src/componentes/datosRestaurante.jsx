@@ -1,0 +1,163 @@
+// datosRestaurantes.js
+import * as pictures from '../img/pictures';
+
+export const restaurantes = [
+  {
+    id: 1,
+    fotoSrc: pictures.ajisai,
+    titulo: 'Ajisai',
+    direccion: '6098 Jose Antonio y, Maria Roqu',
+    horas: '07:00-20:30',
+    tipo: 'Sin lactosa | Vegano',
+    telefono: '0983 994 674',
+    
+  },
+    
+      {
+        id: 2,
+        fotoSrc: pictures.curcuma,
+        titulo: 'Curcuma',
+        direccion: '6098 Jose Antonio y, Maria Roqu',
+        horas: '07:00-20:30',
+        tipo: 'Celiaco | Vegano',
+        telefono: '0983 994 674',
+      },
+      {
+        id: 3,
+        fotoSrc: pictures.lamafia,
+        titulo: 'La Mafia',
+        direccion: '6098 Jose Antonio y, Maria Roqu',
+        horas: '07:00-20:30',
+        tipo: 'Celiaco | Vegano',
+        telefono: '0983 994 674',
+      },
+      {
+        id: 4,
+        fotoSrc: pictures.ogaucho,
+        titulo: 'O-Gaucho',
+        direccion: '6098 Jose Antonio y, Maria Roqu',
+        horas: '07:00-20:30',
+        tipo: 'Celiaco | Vegano | Sin Lactosa',
+        telefono: '0983 994 674',
+      },
+      {
+        id: 5,
+        fotoSrc: pictures.pizzahub,
+        titulo: 'PizzaHub',
+        direccion: '6098 Jose Antonio y, Maria Roqu',
+        horas: '07:00-20:30',
+        tipo: 'Celiaco | Vegano',
+        telefono: '0983 994 674',
+      },
+      {
+        id: 6,
+        fotoSrc: pictures.rolandi,
+        titulo: 'Rolandi',
+        direccion: '6098 Jose Antonio y, Maria Roqu',
+        horas: '07:00-20:30',
+        tipo: 'Celiaco | Sin Lactosa',
+        telefono: '0983 994 674',
+      },
+    ];
+
+    //productos de los restaurantes 
+    export const productos = [
+      {
+        id: 1,
+        restauranteId: 1,
+        fotoSrc: pictures.pizza,
+        nombre: 'Pizza de anacardos',
+        tipo: 'Vegano',
+        costo: '30.000Gs',
+      },
+      {
+        id: 2,
+        restauranteId: 1,
+        fotoSrc: pictures.budin,
+        nombre: 'Budin de chocolate',
+        tipo: 'Sin Lactosa | Vegano',
+        costo: '10.000Gs',
+      },
+      {
+        id: 3,
+        restauranteId: 2,
+        fotoSrc: pictures.helado,
+        nombre: 'Helado',
+        tipo: 'Vegano',
+        costo: '14.000Gs',
+      },
+      {
+        id: 4,
+        restauranteId: 2,
+        fotoSrc: pictures.tortita,
+        nombre: 'Tortitas de Chocolate',
+        tipo: 'Celiaco | Vegano',
+        costo: '18.000Gs',
+      },
+      {
+        id: 5,
+        restauranteId: 3,
+        fotoSrc: pictures.helado,
+        nombre: 'Helados',
+        tipo: 'Vegano',
+        costo: '15.000Gs',
+      },
+      {
+        id: 6,
+        restauranteId: 3,
+        fotoSrc: pictures.tortita,
+        nombre: 'Tortitas',
+        tipo: 'Celiaco | Vegano',
+        costo: '15.000Gs',
+      },
+      {
+        id: 7,
+        restauranteId: 4,
+        fotoSrc: pictures.pizza,
+        nombre: 'Pizza Anacardos',
+        tipo: 'Celiaco | Vegano',
+        costo: '45.000Gs',
+      },
+      {
+        id: 8,
+        restauranteId: 4,
+        fotoSrc: pictures.pizza,
+        nombre: 'Pizza de Acelga',
+        tipo: 'Celiaco | Vegano',
+        costo: '45.000Gs',
+      },
+      {
+        id: 9,
+        restauranteId: 5,
+        fotoSrc: pictures.pizza,
+        nombre: 'Pizza Anacardos',
+        tipo: 'Celiaco | Vegano',
+        costo: '45.000Gs',
+      },
+      {
+        id: 10,
+        restauranteId: 5,
+        fotoSrc: pictures.pizza,
+        nombre: 'Pizza de Acelga',
+        tipo: 'Celiaco | Vegano',
+        costo: '45.000Gs',
+      },
+      {
+        id: 11,
+        restauranteId: 6,
+        fotoSrc: pictures.budin,
+        nombre: 'Budin de chocolate',
+        tipo: 'Celiaco | Sin Lactosa',
+        costo: '12.000Gs',
+      },
+      {
+        id: 12,
+        restauranteId: 6,
+        fotoSrc: pictures.tortita,
+        nombre: 'Tortitas de dulce de leche',
+        tipo: 'Sin Lactosa',
+        costo: '16.000Gs',
+      },
+
+    ];
+    
